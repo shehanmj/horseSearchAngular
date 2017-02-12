@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Horse Search</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <script src="jquery-3.1.1.min.js"></script>
+    <script src="angular.js"></script>
+    <script src="app.js"></script>
+  </head>
+  <body ng-app="app">
+    <div class="main" ng-controller="searchController">
+      <div class="search">
+        <input ng-model="zip" id="zip" type="text" placeholder="Zip Code"></input>
+        <div >
+          <select id="breed" ng-model="breed">
+            <option  ng-repeat="breed in breeds">{{breed.$t}}</option>
+          </select>
+          <input type="button" id="search" value="Search"></input>
+      </div>
+      <div class="results">
+        <div>
+          <h1>{{list}}</h1>
+          <h1>{{results.contact.state.$t}}</h1>
+          <h1>{{results.contact.state.$t}}</h1>
+        </div>
+      </div>
+
+    </div>
+  </body>
+
+
+
+
+
+</html>
